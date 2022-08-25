@@ -1,0 +1,14 @@
+<div class="new-redirector">
+    <a href="/new">Tell a message?</a>
+</div>
+<div class="message-container">
+    <% data.forEach(msg => { %>
+        <div class="message">
+            <div class="message-body"><%= msg.text %></div>
+            <div class="message-footer">
+                <div class="message-user"><%= msg.user %></div>
+                <div class="message-time"><%= moment(msg.added).fromNow()%></div>
+            </div>
+        </div>
+        <% }) %>
+</div>
